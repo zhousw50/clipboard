@@ -16,14 +16,14 @@ function r(file) {
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4&&xhr.status == 200){
             var html=xhr.responseText;
-            $("body").html(marked.parse(html));
+            document.getElementsByTagName("body")[0].innerHTML=marked.parse(html);
         }
         else {
-            $("body").html("无此文件");
+            document.getElementsByTagName("body")[0].innerHTML="无此文件";
         }
     };
 }
 $(document).ready(function (){
     if(!c("file"))window.location.href="?file=lists.md"
     r(c("file"));
-});
+})
