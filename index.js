@@ -16,7 +16,7 @@ function r(file) {
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4&&xhr.status == 200){
             var html=xhr.responseText;
-            document.getElementsByTagName("body")[0].innerHTML=marked.parse(html);
+            document.getElementById("1").innerHTML=marked.parse(html);
         }
         else {
             document.getElementsByTagName("body")[0].innerHTML="无此文件";
