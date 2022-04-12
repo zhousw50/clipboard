@@ -19,8 +19,14 @@ function r(file) {
         }
     };
 }
-$(document).ready(function (){
-    if(!c("file"))window.location.href="?file=lists.md"
-    r(c("file"));
-    MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
-})
+function gettime(){
+    //if(document.getElementById("date").innerHTML!=Date())
+        document.getElementById("date").innerHTML=Date();
+}setInterval("gettime()",0.0000000001)
+function show(){
+    document.getElementById("1").removeAttribute("hidden");
+}
+setInterval("show()",1000);
+if(!c("file"))window.location.href="?file=lists.md"
+r(c("file"));
+MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
