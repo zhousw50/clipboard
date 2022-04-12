@@ -26,4 +26,5 @@ function r(file) {
 $(document).ready(function (){
     if(!c("file"))window.location.href="?file=lists.md"
     r(c("file"));
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
 })
