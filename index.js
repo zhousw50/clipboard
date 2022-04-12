@@ -1,4 +1,3 @@
-
 function c(variable)
 {
     var query = window.location.search.substring(1);
