@@ -18,9 +18,6 @@ function r(file) {
             var html=xhr.responseText;
             document.getElementById("1").innerHTML=marked.parse(html);
         }
-        else {
-            document.getElementsByTagName("body")[0].innerHTML="无此文件";
-        }
     };
 }
 $(document).ready(function (){
